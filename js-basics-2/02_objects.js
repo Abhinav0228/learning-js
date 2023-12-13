@@ -36,5 +36,85 @@ jsUser.greetingTwo = function(){
     console.log(`hello there, ${this.name}`);
 }
 
-console.log(jsUser.greeting());
-console.log(jsUser.greetingTwo());
+// console.log(jsUser.greeting());
+// console.log(jsUser.greetingTwo());
+
+
+
+// ********************************************************************************************
+
+
+
+
+// const newUser = new Object()    //singleton object
+const newUser = {}
+newUser.id = 123
+newUser.name = "abhi"
+newUser.isLoggedIn = false
+
+// console.log(newUser);
+
+const regularUser = {
+    email: "ab@gmail.com",
+    fullName: {
+        userfullName: {
+            firstName: "Abhinav",
+            lastName: "Sharma"
+        }
+    }
+}
+
+// console.log(regularUser.fullName.userfullName.lastName);
+
+const obj1 = {1: "a", 2: "b"}
+const obj2 = {3: "a", 4: "b"}
+// const obj3 = { obj1, obj2}
+// const obj3 = Object.assign(obj1, obj2)
+// const obj3 = { ...obj1, ...obj2 }
+// console.log(obj3);
+
+
+const users = [
+    {
+        id: 1,
+        email: "a@gmail.com"
+    },
+    {
+        id: 1,
+        email: "a@gmail.com"
+    },
+    {
+        id: 1,
+        email: "a@gmail.com"
+    }
+]
+
+// users[1].email
+// console.log(newUser);
+// console.log(Object.keys(newUser));
+// console.log(Object.values(newUser));
+// console.log(Object.entries(newUser));
+// console.log(newUser.hasOwnProperty('isLoggedIn'));
+
+
+
+// *************************************************************************************
+
+
+
+// Destructuring of obj 
+const course = {
+    courseName: "js learning",
+    coursePrice: 999,
+    courseInstructor: "youtube"
+}
+
+// course.courseInstructor
+// instead of calling courseInstructor, courseName etc again and again we can destructure the obj 
+
+const {courseInstructor: instructor} = course
+// courseInstructor ko humne instructor naam de dia and can call it directly like below nd will give same result
+console.log(instructor);
+
+
+// API 

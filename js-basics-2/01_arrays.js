@@ -30,7 +30,7 @@ const myArr = [0 ,5, 7, 3]
 // console.log(myn2);
 // console.log("C ", myArr);
 
-// slice does not change the original array but splice change the original array
+// slice does not change the original array but  nal array
 
 
 const marvel_heros = ["iron_man", "spiderman", "thor"]
