@@ -32,3 +32,40 @@ function loginUserMessage(username){
 }
 // console.log(loginUserMessage("abhinav"));
 
+
+
+function calculateCartPrice(num1){
+    return num1
+}
+// console.log(calculateCartPrice(10));
+// console.log(calculateCartPrice(100, 200, 300));      // will consider only first value
+// to calucalte all we have to use rest operator
+
+function calculateCartPrice(...num1){
+    return num1
+}
+// console.log(calculateCartPrice(300, 200, 300));
+
+
+const user = {
+    userName: "Abhinav",
+    price: 199
+}
+
+function handleObject(anyObject){
+    // console.log(`Username is ${anyObject.userName} and price is ${anyObject.price}`);
+}
+
+// handleObject(user)
+// not neccessary we have to define object first we can also do like below
+
+handleObject({
+    userName: "abhi",
+    price: 499
+})
+
+const myNewArray = [200, 500, 900, 600]
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+console.log(returnSecondValue(myNewArray));
