@@ -60,3 +60,53 @@ const newNUms = myNumbers.map( (num) =>  num + 10 )
 myNumbers.forEach( (all) => {
     console.log(all + 10);
 } )
+
+
+const chainNums = myNumbers
+                    .map( (num) => num*10 )
+                    .map( (num) => num + 2 )  // here the value will be what operation is run on first map ex here first value will be 10
+
+// console.log(chainNums);
+
+
+
+
+// NEW FIILEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE -- reduce
+
+const reduceNums = [1, 2, 3]
+
+// const myTotal = reduceNums.reduce( function (acc, curval) {
+//     console.log(`acc: ${acc} and currval ${curval}`);
+//     return acc + curval
+// } , 3 )
+
+// console.log(myTotal);
+
+const myTotal = reduceNums.reduce( (acc, curr) => acc + curr, 0 )
+console.log(myTotal);
+
+
+const shoppingCart = [
+    {
+        itemName: "js course",
+        price: 2999
+    },
+    {
+        itemName: "py course",
+        price: 3999
+    },
+    {
+        itemName: "mobile dev course",
+        price: 6999
+    },
+    {
+        itemName: "machine learning course",
+        price: 6999
+    }
+]
+
+const pricetoPay = shoppingCart.reduce( (acc, item) => acc + item.price , 0 )
+console.log(pricetoPay);
+
+
+
