@@ -1,3 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>BMI calculator</h1>
+    <form action="">
+        <p>
+            <label for="bmi">Height in cm</label>
+            <input type="text" name="bmi" id="height">
+        </p>
+        <p>
+            <label for="kg">Weight in Kg</label>
+            <input type="text" name="kg" id="weight">
+        </p>
+        <button>Calculate</button>
+        <div id="results"></div>
+        <div id="final"></div>
+        <div class="weight-guide">
+            <h3>BMI Weight Guide</h3>
+            <p>Under Weight = Less than 18.6</p>
+            <p>Normal Range = 18.6 to 24.9</p>
+            <p>Overweight = Greater than 24.9</p>
+        </div>
+    </form>
+
+    <script src="bmi.js"></script>
+</body>
+</html>
+
+
 const form = document.querySelector('form')
 
 form.addEventListener('submit', function(e){
