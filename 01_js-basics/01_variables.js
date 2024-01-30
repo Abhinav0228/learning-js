@@ -14,4 +14,3 @@ City = "pun"
 // we dont use var because of issue in block and functional scope
 
 console.table([accId, accEmail, accPass, City, accState])
-vvj
