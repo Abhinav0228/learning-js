@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Add some basic styling for better appearance */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    input {
+      margin-right: 10px;
+    }
+
+    #todoList {
+      margin-top: 20px;
+    }
+  </style>
+  <title>Todo List</title>
+</head>
+<body>
+
+  <h1>Todo List</h1>
+  
+  <!-- Input field and button to add todo -->
+  <input type="text" id="todoInput" placeholder="Enter your todo">
+  <button onclick="addTodo()">Add Todo</button>
+
+  <!-- Todo list container -->
+  <div id="todoList"></div>
+
+  <script>
+    function addTodo() {
+      // Get the input value
+      var todoText = document.getElementById('todoInput').value;
+
+      // Check if the input is not empty
+      if (todoText.trim() !== '') {
+        // Create a new div element
+        var todoItem = document.createElement('div');
+
+        // Set the text content of the div to the todo text
+        todoItem.textContent = todoText;
+
+        // Append the new div to the todo list container
+        document.getElementById('todoList').appendChild(todoItem);
+
+        // Clear the input field for the next todo
+        document.getElementById('todoInput').value = '';
+      }
+    }
+  </script>
+
+</body>
+</html>

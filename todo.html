@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .todo-wrapper {
+            padding: 50px 100px;
+        }
+        #input-todo {
+            display: none;
+            flex-direction: column;
+        }
+        input {
+            border: 1px solid #ebebeb;
+            border-radius: 20px;
+            padding: 20px;
+            font-size: 16px;
+        }
+        button {
+            width: auto;
+            text-align: center;
+            height: 40px;
+            border-radius: 40px;
+            background: #777CEA;
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+            border: unset;
+            padding: 4px 25px ;
+            cursor: pointer;
+        }
+        #input-todo button {
+            width: 150px;
+            text-align: center;
+            height: 40px;
+            border-radius: 40px;
+            background: #777CEA;
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+            border: unset;
+            padding: unset;
+            margin-top: 10px;
+        }
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            margin: 0 0 30px;
+        }
+        #input-todo {
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="todo-wrapper">
+        <h1>ToDo List</h1>
+        <button id="addTodo">+ Add Your Todo Task</button>
+        <div id="addedTodo"></div>
+        <div id="input-todo"></div>
+    </div>
+
+    <script>
+        const addTodo = document.getElementById('addTodo')
+        const todoAdd = document.getElementById('input-todo')
+        const save = document.getElementById('saveTodo')
+        let addedTodo = document.getElementById('addedTodo')
+        let todoItem = ""
+        addTodo.addEventListener('click', function(){
+            todoAdd.innerHTML = `<input type ="text" name="new_todo" id="todoItem">
+            <button id="saveTodo" onclick="todoBox()">Save Your Todo</button>
+            <button id="clearTodo" onclick="clear()">Delete</button>`
+            todoAdd.style.display = "flex"
+        })
+        
+        function todoBox(){
+            if (todoAdd !== "") {
+                todoItem = document.getElementById('todoItem').value
+                console.log(todoItem)
+                addedTodo.innerHTML += `<p class="user-input">${todoItem}</p>`
+
+            }
+        }
+
+        function clear(){
+            console.log("delete");
+        }
+
+
+    </script>
+</body>
+</html>
