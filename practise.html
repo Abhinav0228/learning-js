@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-container {
+            padding: 50px 100px;
+        }
+        .main-container h1 {
+            font-size: 40px;
+            text-align: center;
+        }
+        button {
+            width: 180px;
+            text-align: center;
+            height: 40px;
+            border-radius: 40px;
+            background: #777CEA;
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+            border: unset;
+            padding: 4px 25px ;
+            cursor: pointer;
+            margin: 0 auto;
+        }
+        input {
+            border: 1px solid #a9a9a9;
+            border-radius: 20px;
+            padding: 20px;
+            font-size: 16px;
+            width: 70%;
+        }
+        .input-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        #todos-container {
+            margin-bottom: 20px;
+        }
+        #todos-container div{
+            font-size: 25px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h1>Todo List</h1>
+        <div id="todos-container">
+    
+            <!-- todos will be entered here -->
+        </div>
+        <div class="input-wrap">
+            <input type="text" name="todo" id="input_todo">
+            <button id="newTodo" onclick="addTodo()">+ Add Your Todo</button>
+        </div>
+    </div>
+    <script>
+        let input = document.getElementById('input_todo');
+        let btn = document.getElementById('newTodo')
+        let todoContain = document.getElementById("todos-container")
+        let arr = [];
+        function addTodo() {
+    if (input.value !== "") {
+        arr.push(input.value);
+        console.log(input.value, arr);
+
+        // Clear the existing content of todoContain
+        todoContain.innerHTML = "";
+
+        // Create a new div for each item in the array
+        for (const num of arr) {
+            let todoNew = document.createElement('div');
+            todoNew.innerHTML = num;
+            todoContain.appendChild(todoNew);
+        }
+
+        // Clear the input value after adding a todo
+        input.value = "";
+    }
+    else {
+        alert ("Enter your Todo")
+    }
+}
+    </script>
+</body>
+</html>
