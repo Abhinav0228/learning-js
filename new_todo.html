@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .todo-wrapper {
+            padding: 50px 100px;
+        }
+        .input-todo {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        button {
+            width: 180px;
+            text-align: center;
+            height: 40px;
+            border-radius: 40px;
+            background: #777CEA;
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+            border: unset;
+            padding: 4px 25px ;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="todo-wrapper">
+        <div id="todo-here"></div>
+        <div class="input-todo">
+            <input type="text" name="todo" id="todo">
+            <button id="enter-todo" onclick="addTodo()">Save</button>
+        </div>
+    </div>
+
+    <script>
+        let enteredTodo = document.getElementById('todo-here')
+        function addTodo() {
+        let input = document.getElementById('todo')
+        console.log('clicked');
+            if ( input.value !== "" ) {
+               console.log(input.value);
+               let todoItem = document.createElement('div')
+                todoItem.textContent = input.value;
+                console.log(todoItem);
+                enteredTodo.appendChild(todoItem)
+            }
+            input.value = ""
+        }
+    </script>
+</body>
+</html>
