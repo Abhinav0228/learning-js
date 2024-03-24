@@ -75,11 +75,16 @@
         todoContain.innerHTML = "";
 
         // Create a new div for each item in the array
-        for (const num of arr) {
+        // for (const num of arr) {
+        //     let todoNew = document.createElement('div');
+        //     todoNew.innerHTML = num;
+        //     todoContain.appendChild(todoNew);
+        // }
+        arr.forEach((item) => {
             let todoNew = document.createElement('div');
-            todoNew.innerHTML = num;
-            todoContain.appendChild(todoNew);
-        }
+             todoNew.innerHTML = item;
+             todoContain.appendChild(todoNew);
+        });
 
         // Clear the input value after adding a todo
         input.value = "";

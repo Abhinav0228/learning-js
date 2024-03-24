@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-black {
+            background-color: #212121;
+            color: #fff;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <h1 id="title" class="heading">Learning JS DOM <span style="display: none;">test text</span></h1>
+    <h2>Lorem ipsum dolor sit.</h2>
+    <h2>Lorem ipsum dolor sit.</h2>
+    <h2>Lorem ipsum dolor sit.</h2>
+    <p>lets learn document object model</p>
+
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+    </ul>
+
+    <script>
+        const title = document.getElementById('title')
+        document.getElementById('title').id
+        document.getElementById('title').className
+        document.getElementById('title').getAttribute('class')
+        console.log(document.getElementById('title').getAttribute('class'))
+        console.log(document.getElementById('title').setAttribute('class', 'test'))  // it will always oberwrite the previous value
+        console.log(document.getElementById('title').setAttribute('class', 'test heading')) // now it will add both the values 
+        title.style.backgroundColor = "blue"
+        title.style.padding = "10px"
+        title.style.borderRadius = "10px"
+        // console.log(title.textContent);
+        
+        console.log(title.innerText); // here span value "will not" be displayed
+        // output: Learning JS DOM
+
+        console.log(title.textContent); // here span value "will be" displayed
+        // output: Learning JS DOM test text
+
+        console.log(title.innerHTML);  // here it will show the content and get full html of inside
+        // output: Learning JS DOM <span style="display: none;">test text</span>
+
+        console.log(document.querySelector('h2'))      // gets only the first element
+        console.log(document.querySelector('#title'))
+
+        const myLi = document.querySelectorAll('li')
+        // myLi.style.color = "red"    // have to specify the index
+        myLi[0].style.color = "red"
+        // its not string but its uses only forEach function 
+        myLi.forEach((l) => {
+            l.style.backgroundColor = "blue"
+        })
+
+    </script>
+</body>
+</html>
