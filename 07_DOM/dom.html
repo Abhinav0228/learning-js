@@ -20,10 +20,10 @@
     <p>lets learn document object model</p>
 
     <ul>
-        <li>one</li>
-        <li>two</li>
-        <li>three</li>
-        <li>four</li>
+        <li class="list-item">one</li>
+        <li class="list-item">two</li>
+        <li class="list-item">three</li>
+        <li class="list-item">four</li>
     </ul>
 
     <script>
@@ -59,6 +59,12 @@
             l.style.backgroundColor = "blue"
         })
 
+        const tempList = document.getElementsByClassName('list-item')
+        const convertedArr = Array.from(tempList)
+        console.log(convertedArr);
+        convertedArr.forEach(function(li) {
+            li.style.color = "yellow"
+        } )
     </script>
 </body>
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-color {
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-color">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+
+    <script>
+        function addLanguage(langName) {
+            const li = document.createElement('li')
+            li.innerHTML = langName;
+            document.querySelector('.language').appendChild(li)
+        }
+        addLanguage('python')
+        addLanguage('ruby')
+
+        function optiLanguage(langName) {
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(langName));
+            document.querySelector('.language').appendChild(li)
+        }
+        optiLanguage("typescript")
+
+        // Edit
+        const secLang = document.querySelector("")
+    </script>
+</body>
+</html>
