@@ -33,7 +33,16 @@
         optiLanguage("typescript")
 
         // Edit
-        const secLang = document.querySelector("")
+        const secLang = document.querySelector("li:nth-child(2)")
+        // secLang.innerHTML = "Mojo"
+
+        const newLi = document.createElement('li')
+        newLi.textContent = "Mojo"
+        secLang.replaceWith(newLi)
+
+        // Remove
+        const removeLang = document.querySelector('li:last-child')
+        removeLang.remove()
     </script>
 </body>
 </html>
