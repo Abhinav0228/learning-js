@@ -1,3 +1,5 @@
+// a Promise is an object that represents the eventual completion (or failure) of an asynchronous operation, and its resulting value. Promises are used to handle asynchronous operations such as fetching data from a server, reading files, or any operation that takes time to complete.
+
 const promiseOne = new Promise((resolve, reject ) => {
     // Do asyn task
     // DB calls, network call
