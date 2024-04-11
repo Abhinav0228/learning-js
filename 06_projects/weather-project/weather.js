@@ -12,7 +12,7 @@ search.addEventListener('click', ()=> {
     if (city === '')
         return;
 
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`).then(response => response.json()).then
+        fetch(`https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}`).then(response => response.json()).then
         ( json => {
             if (json.cod === '404') {
                 container.style.height = '400px';
@@ -69,3 +69,30 @@ search.addEventListener('click', ()=> {
 
         });
 });
+
+// Function to fetch data from API
+function fetchData() {
+    // Replace 'https://api.example.com/data' with your API endpoint
+    fetch('`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}')
+      .then(response => {
+        // Check if response is successful (status code 200-299)
+        if (response.ok) {
+          // Parse JSON data from the response
+          return response.json();
+        }
+        // If response is not successful, throw an error
+        throw new Error('Network response was not ok.');
+      })
+      .then(data => {
+        // Data processing logic
+        console.log(data); // Log the data to the console or do something else with it
+      })
+      .catch(error => {
+        // Error handling logic
+        console.error('Error fetching data:', error);
+      });
+  }
+  
+  // Call the fetchData function to initiate the API request
+  fetchData();
+  

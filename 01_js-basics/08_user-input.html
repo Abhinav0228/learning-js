@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name" id="myLabel">What's your name?</label>
+    <input type="text" id="name">
+    <button type="button" id="submit">Submit</button>
+
+    <script>
+        const name = document.getElementById("name")
+        const btnn = document.getElementById("submit")
+
+        btnn.addEventListener("click", ()=>{
+            let userInput = name.value
+            console.log(userInput);
+        });
+
+        // another method
+        let username;
+        document.getElementById("submit").onclick = function() {
+            username = document.getElementById("name").value
+            console.log(username);
+
+            document.getElementById("myLabel").innerHTML = `Hi ${username}`
+        }
+    </script>
+</body>
+</html>

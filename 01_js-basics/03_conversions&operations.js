@@ -8,9 +8,13 @@ console.log(typeof numString);
 // "33abc" => NaN
 // true => 1; false => 0
 
-
 operations
 
 // console.log("1" + 2);  // 12
 // console.log(1 + "2");   // 12
 // console.log("1" + 2 + 2);  //122
+
+// displaying input of user
+
+let userName = window.prompt("what's your name?")
+console.log(userName);
