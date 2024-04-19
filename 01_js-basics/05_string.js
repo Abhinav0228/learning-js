@@ -37,5 +37,11 @@ let splitStr = "my name is abhinav sharma"
 const newSplit = splitStr.split(" ")
 // console.log(newSplit[2]);
 
-console.log(splitStr.slice('0', '10'));
+// console.log(splitStr.slice('0', '10'));
 
+// Method chaining => calling one method after the another
+//                    in one continous line of code  
+
+let userName = "abhinav"
+let letter = userName.charAt(0).toUpperCase();
+console.log(letter);

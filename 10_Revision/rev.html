@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="checkBox">Subscribe</label>
+    <input type="checkbox" id="checkBox"><br>
+
+    <label for="masterCard">MasterCard</label>
+    <input type="radio" id="masterCard">
+    <label for="gpay">Gpay</label>
+    <input type="radio" id="gpay">
+    <label for="paytm">Paytm</label>
+    <input type="radio" id="paytm"> <br>
+
+    <button id="subBtn">Submit</button>
+
+    <script>
+        document.getElementById('subBtn').onclick = function(){
+            const myCheckBox = document.getElementById('checkBox')
+            const masterCard = document.getElementById('masterCard')
+            const paytm = document.getElementById('paytm')
+            const gpay = document.getElementById('gpay')
+            if (myCheckBox.checked) {
+                console.log('you have subscribed');
+            }
+            else {
+                console.log('you have not subscribed');
+            }
+
+            if (masterCard.checked) {
+                console.log('You are paying with mastercard');
+            }
+            else if (paytm.checked) {
+                console.log('You are paying with paytm');
+            }
+            else if (gpay.checked) {
+                console.log('You are paying with gpay');
+            }
+            else {
+                console.log('you are not paying');
+            }
+        }
+
+
+
+
+        // switch statement 
+
+        let grade = "F"
+        switch (grade) {
+            case "A": 
+                console.log('You did Great!!');
+                break;
+            case "B": 
+                console.log('You did Good!!');
+                break;
+            case "C": 
+                console.log('You did Okay!!');
+                break;
+            case "D": 
+                console.log('You passed...Barely');
+                break;
+            case "F": 
+                console.log('You FAILED!!');
+                break;
+            default:
+                console.log(grade, "is not a letetr grade");
+        }
+
+
+        // for loops
+
+        // for (i = 0; i <= 10; i += 1) {
+        //     console.log(i);
+        // }
+
+        // break == breaks out of loop entirely
+        // continue == skip an iteration of loop
+
+        for ( i = 1; i <= 5; i += 1 ) {
+            for (j = 1; j <=10; j += 1 ) {
+                console.log(i * j); 
+            }
+
+        }
+    </script>
+</body>
+</html>

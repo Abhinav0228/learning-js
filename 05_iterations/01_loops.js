@@ -41,6 +41,10 @@ for (let index = 0; index < myArray.length; index++) {
 
 // break and continue
 
+// break == breaks out of loop entirely
+// continue == skip an iteration of loop
+
+
 for (let index = 1; index <= 20; index++) {
     if ( index == 5 ) {
         // console.log(`Detected 5`);
