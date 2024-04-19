@@ -17,4 +17,13 @@ operations
 // displaying input of user
 
 let userName = window.prompt("what's your name?")
-console.log(userName);
+// console.log(userName);
+
+let temp = 15;
+
+if (temp > 0 && temp < 30 ) {
+    console.log('The weather is Good!!');
+}
+else {
+    console.log('The weather is Bad!!');
+}
