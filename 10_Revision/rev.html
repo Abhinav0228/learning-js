@@ -18,6 +18,12 @@
 
     <button id="subBtn">Submit</button>
 
+    <h1>Number Guessing Game</h1>
+    <label for="num">Enter Your Guess</label>
+    <input type="text" id="num">
+    <button id="guessNum">Submit</button>
+    <p id="result"></p>
+
     <script>
         document.getElementById('subBtn').onclick = function(){
             const myCheckBox = document.getElementById('checkBox')
@@ -88,13 +94,83 @@
 
         // }
 
-        let k =1;
-        for( i=1; i <= 5; i +=2 ){
-            for (j = 1; j <= i; j++ ) {
-                document.write(k++)
+        // let k =1;
+        // for( i=1; i <= 5; i +=2 ){
+        //     for (j = 1; j <= i; j++ ) {
+        //         document.write(k++)
+        //     }
+        //     document.write('<br>')
+        // }
+
+
+        // functions
+
+        // let area;
+        // let width;
+        // let height;
+
+        // width = window.prompt('Enter Width');
+        // height = window.prompt('Enter Height');
+
+        // area = getArea(width, height)
+
+        // console.log(`The Area is ${area}`);
+
+        // function getArea(width, height){
+        //     let result  = width * height;
+        //     return result;
+        // }
+
+        // Turnary operator:
+        //                  1. a condition with ?
+        //                  2. expression if True :
+        //                  3. expression if False 
+        // condition ? exprIfTrue : exprIfFalse
+
+        // let adult = checkAge(21);
+        // console.log(adult);
+
+        // function checkAge (age) {
+            // if (age >= 18 ){
+            //     return true;
+            // }
+            // else {
+            //     return false;
+            // }
+
+            // return age >= 18 ? true : false
+        // }
+
+        // checkWinner(true)
+        // function checkWinner(win) {
+        //     win ? console.log('You win') : console.log('you loose');
+        // }
+
+        // let sunny = false;
+
+        // sunny ? console.log('its sunny') : console.log('rainy');
+        
+        let randomNum = Math.floor(Math.random()* 10 + 1);
+        let guesses = 0;
+        console.log(randomNum);
+
+        document.getElementById('guessNum').onclick = function() {
+            
+            let guess = document.getElementById('num').value;
+            guesses += 1;
+           
+            if (guess == randomNum ){
+                result.innerHTML = `you guessed it right, you took ${guesses} chances`;
             }
-            document.write('<br>')
+            else {
+                result.innerHTML = `you guessed it Wrong`;
+            }
+           
         }
+
+
+
+
     </script>
 </body>
 </html>
