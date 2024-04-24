@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="enterTemp">Enter the temperature</label><br>
+    <input type="text" id="enterTemp"><br>
+    <label for="" id="convert">Convert To</label> <br>
+    <input type="radio" id="cel" name="temperature">
+    <label for="cel">Celsius</label>
+    <input type="radio" id="feh" name="temperature">
+    <label for="feh">Fehrenheit</label><br>
+
+    <button type="button" id="subBtn">Submit</button> <br>
+    <label id="tempLabel"></label>
+
+    <script>
+        document.getElementById('subBtn').onclick = function() {
+            let temp;
+            
+            if ( document.getElementById('cel').checked ) {
+                temp = document.getElementById('enterTemp').value;
+                temp = Number(temp);
+                temp = toCelcius(temp)
+                document.getElementById('tempLabel').innerHTML = temp.toPrecision(3) + '°C';
+                // Press alt + 0176(on num pad) to add {°} symbol 
+            }
+            else if ( document.getElementById('feh').checked ) {
+                temp = document.getElementById('enterTemp').value;
+                temp = Number(temp);
+                temp = toFah(temp)
+                document.getElementById('tempLabel').innerHTML = temp.toPrecision(3) + '°F'
+
+            }
+            else {
+                document.getElementById('tempLabel').innerHTML = 'Select your unit  '
+            }
+            let val = document.getElementById('enterTemp').value;
+        }
+
+        function toCelcius(temp) {
+            return (temp-21) * (5/9);
+        }
+        function toFah(temp) {
+            return temp * 9 / 5 +32;
+        }
+    </script>
+</body>
+</html>

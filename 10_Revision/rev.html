@@ -168,7 +168,35 @@
            
         }
 
+        // sort an array
 
+        // let fruits = ["banana", "kiwi", "mango", "apple"];
+
+        // fruits = fruits.sort();
+
+        // in reverse 
+        // fruits = fruits.sort().reverse();
+
+        // for (fruit of fruits ) {
+        //     console.log(fruit);
+        // }
+
+        // 2D array ==> an array of arrays
+
+        let fruits = ["apple", "banana", "kiwi"];
+        let veggies = ["carrots", "onions", "potato"];
+        let meat = ["eggs", "pork", "fish"]
+
+        let groceryList = [fruits, veggies, meat]
+        console.log(...groceryList);
+
+        for (grocery of groceryList) {
+            console.log(grocery);
+
+            for( item of  grocery) {
+                console.log(item);
+            }
+        }
 
 
     </script>
