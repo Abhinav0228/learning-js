@@ -150,23 +150,23 @@
 
         // sunny ? console.log('its sunny') : console.log('rainy');
         
-        let randomNum = Math.floor(Math.random()* 10 + 1);
-        let guesses = 0;
-        console.log(randomNum);
+        // let randomNum = Math.floor(Math.random()* 10 + 1);
+        // let guesses = 0;
+        // console.log(randomNum);
 
-        document.getElementById('guessNum').onclick = function() {
+        // document.getElementById('guessNum').onclick = function() {
             
-            let guess = document.getElementById('num').value;
-            guesses += 1;
+        //     let guess = document.getElementById('num').value;
+        //     guesses += 1;
            
-            if (guess == randomNum ){
-                result.innerHTML = `you guessed it right, you took ${guesses} chances`;
-            }
-            else {
-                result.innerHTML = `you guessed it Wrong`;
-            }
+        //     if (guess == randomNum ){
+        //         result.innerHTML = `you guessed it right, you took ${guesses} chances`;
+        //     }
+        //     else {
+        //         result.innerHTML = `you guessed it Wrong`;
+        //     }
            
-        }
+        // }
 
         // sort an array
 
@@ -183,20 +183,47 @@
 
         // 2D array ==> an array of arrays
 
-        let fruits = ["apple", "banana", "kiwi"];
-        let veggies = ["carrots", "onions", "potato"];
-        let meat = ["eggs", "pork", "fish"]
+        // let fruits = ["apple", "banana", "kiwi"];
+        // let veggies = ["carrots", "onions", "potato"];
+        // let meat = ["eggs", "pork", "fish"]
 
-        let groceryList = [fruits, veggies, meat]
-        console.log(...groceryList);
+        // let groceryList = [fruits, veggies, meat]
+        // console.log(...groceryList);
 
-        for (grocery of groceryList) {
-            console.log(grocery);
+        // for (grocery of groceryList) {
+        //     console.log(grocery);
 
-            for( item of  grocery) {
-                console.log(item);
-            }
-        }
+        //     for( item of  grocery) {
+        //         console.log(item);
+        //     }
+        // }
+
+
+        // Rest Parameters == represents an indefinite number of parameters
+                            //   (Packs arguments into an array)
+
+
+        let a = 5;
+        let b = 10;
+        let c = 15;
+        let d = 20;
+
+        // console.log(sum(a, b, d));
+        // Without rest
+        // function sum (a, b) {
+        //     return a + b;
+        // }
+
+        // if we have multiple paramets we use rest parameter
+
+        // function sum(...numbers) {
+        //     let total = 0;
+        //     for ( let number of numbers ) {
+        //         total += number;
+        //     }
+        //     return total; 
+        // }
+
 
         // callback function ==  a function passed as an argument
         //                       to another function
@@ -220,12 +247,117 @@
         // }
 
         // forEach function 
+        // executes a provided callback function once for each element 
 
-        let students = ["spiderman", "batman", "deadpool"]
+        // let students = ["spiderman", "batman", "deadpool"]
+        // // students.forEach(captailize);
+        // students.forEach(print);
 
-        function captailize (elemet, index, array) {
-            // array[index] = element[] 
+        // function captailize (element, index, array) {
+        //     array[index] = element[0].toUpperCase() + element.substring(1);
+        // }
+        // console.log(students[0]);
+
+        // function print(element) {
+        //     console.log(element);
+        // }
+
+        // array.map() == executes a provided callback function once for each array element 
+        //                and creates a new array 
+
+        let numbers = [1, 2, 3, 4, 5];
+        // let squares = numbers.map(square);
+
+        // squares.forEach(square);
+
+        function square(element) {
+            return console.log(Math.pow(element, 2));
         }
+
+        let squares = numbers.forEach(square)
+        
+
+        // array.filter() == creates a new array with all elements that pass the test provided by the function 
+
+        // let age = [21, 24, 12, 18, 20, 10];
+        // let filter = age.filter(checkAge);
+
+        // filter.forEach(print);
+
+        // function checkAge(element) {
+        //     return element >= 18;
+        // }
+
+        // function print(element) {
+        //     return console.log(element);
+        // }
+
+
+        // array.reduce == reduces an array into a single value (used mostly like adding numbers of array) 
+
+        // let price = [50, 75, 154, 95, 56, 74]
+        // let total = price.reduce(checkOut);
+
+        // console.log(`The total is: $${total}`);
+
+        // function checkOut(total, element) {
+        //     return total + element;
+        // }
+
+
+        // Ascending/Descending sorting of an array 
+
+        // let grades = [100, 95, 85, 37, 50];
+        // grades = grades.sort(descSort)
+        
+        // grades.forEach(print);
+
+        // function descSort(x, y) {
+        //     return y - x;
+        // }
+
+        // function ascSort(x, y) {
+        //     return x - y;
+        // }
+
+        // function print(element) {
+        //     console.log(element);
+        // }
+
+
+        // shuffle elements of array 
+
+        // let cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+
+        // shuffle(cards);
+
+        // let shuffle = (array) => {
+        //     let currentIndex = array.length;
+        // }
+
+        // nested functions == functions inside another function
+        //                     Outer function have access to inner function
+        //                     inner function are hidden from outside
+
+
+        let userName = "Abhi";
+        let userInbox = 0;
+        login();
+        
+
+        function login() {
+            displayUser()
+            displayMsg()
+
+            function displayUser() {
+                console.log(`Welcome, ${userName}`);
+            }
+
+            function displayMsg() {
+                console.log(`You have ${userInbox} messages`);
+            }
+        }
+
 
     </script>
 </body>
