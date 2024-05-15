@@ -359,6 +359,76 @@
         }
 
 
+
+         <!-- super == refers to the parent class
+             commonly used to invoke constructor of a parent class -->
+
+    <script>
+        class Animal {
+
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+        }
+
+        class Rabbit extends Animal {
+            constructor(name, age, runSpeed) {
+                super(name, age);
+                this.runSpeed = runSpeed;
+            }
+        }
+
+        class Fish extends Animal {
+            constructor(name, age, swimSpeed) {
+                super(name, age);
+                this.swimSpeed = swimSpeed;
+            }
+        }
+
+        // const rabbit = new Rabbit("rabbit", 5, 40);
+        // console.log(rabbit.name);
+        // console.log(rabbit.age);
+
+
+
+
+
+    // get == binds an object property to a function when that property is accessed
+
+    // set == binds an object property to a function when that property is assigned a value
+
+
+    class Car {
+        constructor(power) {
+            this._power = power;
+            this._gas = 25;
+        }
+
+        get power(){
+            return `${this._power}hp`;
+        }
+        get gas(){
+            return `${this._gas}L (${this._gas / 50 * 100}%)`;
+        }
+        set gas(value){
+            if(value > 50) {
+                value = 50;
+            }
+            else if(value < 0){
+                value = 0;
+            }
+            this._gas = value
+        }
+    }
+
+    let car = new Car(400);
+    car.gas = 12;
+
+    // console.log(car.power);
+    // console.log(car.gas);
+
+
     </script>
 </body>
 </html>
