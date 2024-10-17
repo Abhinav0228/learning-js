@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    padding: 50px 30px;
+}
+.report-wrapper {
+    padding: 30px ;
+    border-radius: 16px;
+    box-shadow: 2px 1px 5px #414141;
+    background: linear-gradient(63deg, #aecaae, #f3ffd7);
+}
+h1.title {
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+}
+input {
+    border: unset;
+    padding: 0px 16px;
+    font-size: 14px;
+    line-height: 26px;
+    background: transparent;
+    outline: unset;
+    border-bottom: 1px dashed #007400;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+table#report-table, tr, td, th {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px 8px;
+}
+table#report-table {
+    width: 100%;
+}
+table#report-table td:not(:first-child) {
+    text-align: center;
+}
+.calcbtn {
+    border: unset;
+    padding: 8px 16px;
+    border-radius: 16px;
+    background: #f3ffd7;
+    color: #007400;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+button.print {
+    background: #007400;
+    border: unset;
+    padding: 8px 16px;
+    border-radius: 16px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}

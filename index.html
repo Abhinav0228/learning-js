@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="report-wrapper">
+            <button onclick="window.print()" class="print">Print this page</button>
+            <h1 class="title">Student Report Card</h1>
+            <form action="" id="student-info">
+                <div class="form-input">
+                    <label for="name">Student's Name</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="form-input">
+                    <label for="name">Class</label>
+                    <input type="number" name="number" id="num">
+                </div>
+            </form>
+
+            <table id="report-table">
+                <tr>
+                    <th>All Subjects</th>
+                    <th colspan="3">1<sup>st</sup> term Exam</th>
+                    <th colspan="3">2<sup>nd</sup>term Exam</th>
+                    <th colspan="4">Final term Exam</th>
+                    <th colspan="3">Grand Total</th>
+                </tr>
+                <tr>
+                    <td>Subjects</td>
+
+                    <td>Total Marks</td>
+                    <td>Obt. Marks</td>
+                    <td>Status</td>
+
+                    <td>Total Marks</td>
+                    <td>Obt. Marks</td>
+                    <td>Status</td>
+
+                    <td>Total Marks</td>
+                    <td>Obt. Marks</td>
+                    <td>Status</td>
+
+                    <td>Grand Total</td>
+                    <td>Grand Obt. Marks</td>
+                    <td>Grade</td>
+                </tr>
+                <tr>
+                    <td>English</td>
+                    <td>100</td>
+                    <td>
+                        <input type="number" name="first-term" id="">
+                    </td>
+                    <td class="status1"></td>
+                    <td>100</td>
+                    <td><input type="number" name="second-term" id=""></td>
+                    <td class="status2"></td>
+                    <td>100</td>
+                    <td><input type="number" name="third-term" id=""></td>
+                    <td class="status3"></td>
+                    <td>300</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Physics</td>
+                    <td>100</td>
+                    <td> <input type="number" name="first-term" id=""></td>
+                    <td class="status1"></td>
+                    <td>100</td>
+                    <td><input type="number" name="second-term" id=""></td>
+                    <td class="status2"></td>
+                    <td>100</td>
+                    <td><input type="number" name="third-term" id=""></td>
+                    <td class="status3"></td>
+                    <td>300</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Chemistry</td>
+                    <td>100</td>
+                    <td> <input type="number" name="first-term" id=""></td>
+                    <td class="status1"></td>
+                    <td>100</td>
+                    <td><input type="number" name="second-term" id=""></td>
+                    <td class="status2"></td>
+                    <td>100</td>
+                    <td><input type="number" name="third-term" id=""></td>
+                    <td class="status3"></td>
+                    <td>300</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        Maths
+                    </td>
+                    <td>100</td>
+                    <td> <input type="number" name="first-term" id=""></td>
+                    <td class="status1"></td>
+                    <td>100</td>
+                    <td><input type="number" name="second-term" id=""></td>
+                    <td class="status2"></td>
+                    <td>100</td>
+                    <td><input type="number" name="third-term" id=""></td>
+                    <td class="status3"></td>
+                    <td>300</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Hindi</td>
+                    <td>100</td>
+                    <td> <input type="number" name="first-term" id=""></td>
+                    <td class="status1"></td>
+                    <td>100</td>
+                    <td><input type="number" name="second-term" id=""></td>
+                    <td class="status2"></td>
+                    <td>100</td>
+                    <td><input type="number" name="third-term" id=""></td>
+                    <td class="status3"></td>
+                    <td>300</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Phy. Education</td>
+                    <td>100</td>
+                    <td> <input type="number" name="first-term" id=""></td>
+                    <td class="status1"></td>
+                    <td>100</td>
+                    <td><input type="number" name="second-term" id=""></td>
+                    <td class="status2"></td>
+                    <td>100</td>
+                    <td><input type="number" name="third-term" id=""></td>
+                    <td class="status3"></td>
+                    <td>300</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Total Marks:</td>
+                    <td>600</td>
+                    <td>
+                        <button id="calcFirst" class="calcbtn">Calculate Total</button>
+                        <p id="totalFirstDisplay"></p>
+                    </td>
+                    <td id="statusFirst"></td>
+                    <td>600</td>
+                    <td><button id="calcSecond" class="calcbtn">Calculate Total</button>
+                        <p id="totalSecondDisplay"></p></td>
+                    <td id="statusSecond"></td>
+                    <td>600</td>
+                    <td><button id="calcThird" class="calcbtn">Calculate Total</button>
+                        <p id="totalThirdDisplay"></p>
+                    </td>
+                    <td id="statusThird"></td>
+                    <td>1800</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
