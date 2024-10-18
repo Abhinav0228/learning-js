@@ -39,6 +39,7 @@ th, td {
 }
 table#report-table {
     width: 100%;
+    margin-top: 40px;
 }
 table#report-table td:not(:first-child) {
     text-align: center;
@@ -60,4 +61,7 @@ button.print {
     color: #fff;
     font-weight: 600;
     cursor: pointer;
+}
+.print-btn-wrap {
+    text-align: right;
 }
