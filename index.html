@@ -9,7 +9,9 @@
 <body>
     <div class="container">
         <div class="report-wrapper">
-            <button onclick="window.print()" class="print">Print this page</button>
+            <div class="print-btn-wrap">
+                <button onclick="window.print()" class="print">Print this page</button>
+            </div>
             <h1 class="title">Student Report Card</h1>
             <form action="" id="student-info">
                 <div class="form-input">
@@ -26,7 +28,7 @@
                 <tr>
                     <th>All Subjects</th>
                     <th colspan="3">1<sup>st</sup> term Exam</th>
-                    <th colspan="3">2<sup>nd</sup>term Exam</th>
+                    <th colspan="3">2<sup>nd</sup> term Exam</th>
                     <th colspan="4">Final term Exam</th>
                     <th colspan="3">Grand Total</th>
                 </tr>
@@ -63,7 +65,8 @@
                     <td><input type="number" name="third-term" id=""></td>
                     <td class="status3"></td>
                     <td>300</td>
-                    <td></td>
+                    <td class="grandMain"> <button id="" class="finalTotalBtn">click</button>
+                        <p id="showData1"></p></td>
                     <td></td>
                 </tr>
                 <tr>
@@ -78,8 +81,9 @@
                     <td><input type="number" name="third-term" id=""></td>
                     <td class="status3"></td>
                     <td>300</td>
-                    <td></td>
-                    <td></td>
+                    <td class="grandMain"> <button id="" class="finalTotalBtn">click</button>
+                        <p id="showData2"></p></td>
+                        <td></td>
                 </tr>
                 <tr>
                     <td>Chemistry</td>
@@ -93,7 +97,8 @@
                     <td><input type="number" name="third-term" id=""></td>
                     <td class="status3"></td>
                     <td>300</td>
-                    <td></td>
+                    <td class="grandMain"> <button id="" class="finalTotalBtn">click</button>
+                        <p id="showData3"></p></td>
                     <td></td>
                 </tr>
                 <tr>
@@ -110,7 +115,8 @@
                     <td><input type="number" name="third-term" id=""></td>
                     <td class="status3"></td>
                     <td>300</td>
-                    <td></td>
+                    <td class="grandMain"><button id="" class="finalTotalBtn">click</button>
+                        <p id="showData4"></p></td>
                     <td></td>
                 </tr>
                 <tr>
@@ -125,7 +131,8 @@
                     <td><input type="number" name="third-term" id=""></td>
                     <td class="status3"></td>
                     <td>300</td>
-                    <td></td>
+                    <td class="grandMain"><button id="" class="finalTotalBtn">click</button>
+                        <p id="showData5"></p></td>
                     <td></td>
                 </tr>
                 <tr>
@@ -140,7 +147,8 @@
                     <td><input type="number" name="third-term" id=""></td>
                     <td class="status3"></td>
                     <td>300</td>
-                    <td></td>
+                    <td class="grandMain"><button id="" class="finalTotalBtn">click</button>
+                        <p id="showData6"></p></td>
                     <td></td>
                 </tr>
                 <tr>
@@ -161,7 +169,8 @@
                     </td>
                     <td id="statusThird"></td>
                     <td>1800</td>
-                    <td></td>
+                    <td><button id="" class="finalTotalBtn">click</button>
+                        <p id="showData7"></p></td>
                     <td></td>
                 </tr>
             </table>
