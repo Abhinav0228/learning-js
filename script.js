@@ -29,7 +29,6 @@ first.forEach((input, index) => {
 
             arr[index] = num;
         } else {
-            console.log("Invalid input");
             status.innerHTML = ""; 
         }
     });
@@ -40,38 +39,80 @@ calcFirst.addEventListener('click', () => {
     totalFirstDisplay.textContent = `Total: ${totalSum}`; 
     console.log(`Total: ${totalSum}`);  
     
-    const percentOne = (totalSum / 600 ) * 100 ;
-    const statusFirst = document.getElementById('statusFirst')
+    // const percentOne = (totalSum / 600 ) * 100 ;
+    // const statusFirst = document.getElementById('statusFirst')
     
-    if ( percentOne >= 33 && percentOne <= 50 ) {
-        statusFirst.innerHTML = "Third"
-        statusFirst.style.backgroundColor = "#ff9033"
-        statusFirst.style.color = "#fff"
-    }
-    else if ( percentOne >=51 && percentOne <=60 ) {
-        statusFirst.innerHTML = "Second"
-        statusFirst.style.backgroundColor = "#f6f69c"
-        statusFirst.style.color = "#000"
-    }
-    else if ( percentOne >=61 && percentOne <=80 ) {
-        statusFirst.innerHTML = "First"
-        statusFirst.style.backgroundColor = "#d4fbffeb"
-        statusFirst.style.color = "blue"
-    }
-    else if ( percentOne >=81 && percentOne <=90 ) {
-        statusFirst.innerHTML = "Distinct"
-        statusFirst.style.backgroundColor = "#6bff6b"
-        statusFirst.style.color = "#000"
-    }
-    else if ( percentOne >=91 && percentOne <=100 ) {
-        statusFirst.innerHTML = "Brilliant"
-        statusFirst.style.background = "linear-gradient(25deg, #3eb489, #90EE90)";
-        statusFirst.style.color = "#000"
-    }
-    else {
-        statusFirst.innerHTML = "Fail"
-        statusFirst.style.backgroundColor = "#e00c0cc7"
-        statusFirst.style.color = "#fff"
+    // if ( percentOne >= 33 && percentOne <= 50 ) {
+    //     statusFirst.innerHTML = "Third"
+    //     statusFirst.style.backgroundColor = "#ff9033"
+    //     statusFirst.style.color = "#fff"
+    // }
+    // else if ( percentOne >=51 && percentOne <=60 ) {
+    //     statusFirst.innerHTML = "Second"
+    //     statusFirst.style.backgroundColor = "#f6f69c"
+    //     statusFirst.style.color = "#000"
+    // }
+    // else if ( percentOne >=61 && percentOne <=80 ) {
+    //     statusFirst.innerHTML = "First"
+    //     statusFirst.style.backgroundColor = "#d4fbffeb"
+    //     statusFirst.style.color = "blue"
+    // }
+    // else if ( percentOne >=81 && percentOne <=90 ) {
+    //     statusFirst.innerHTML = "Distinct"
+    //     statusFirst.style.backgroundColor = "#6bff6b"
+    //     statusFirst.style.color = "#000"
+    // }
+    // else if ( percentOne >=91 && percentOne <=100 ) {
+    //     statusFirst.innerHTML = "Brilliant"
+    //     statusFirst.style.background = "linear-gradient(25deg, #3eb489, #90EE90)";
+    //     statusFirst.style.color = "#000"
+    // }
+    // else {
+    //     statusFirst.innerHTML = "Fail"
+    //     statusFirst.style.backgroundColor = "#e00c0cc7"
+    //     statusFirst.style.color = "#fff"
+    // }
+
+    const percentOne = (totalSum / 600 ) * 100 ;
+    switch ( percentOne ) {
+        case ( percentOne >= 33 && percentOne <= 50 ):
+            statusFirst.innerHTML = "Third"
+            statusFirst.style.backgroundColor = "#ff9033"
+            statusFirst.style.color = "#fff"
+        break;
+
+        case ( percentOne >=51 && percentOne <=60 ):
+            statusFirst.innerHTML = "Second"
+            statusFirst.style.backgroundColor = "#f6f69c"
+            statusFirst.style.color = "#000"
+        break;
+
+        case ( percentOne >=51 && percentOne <=60 ):
+            statusFirst.innerHTML = "Second"
+            statusFirst.style.backgroundColor = "#f6f69c"
+            statusFirst.style.color = "#000"
+        break;
+
+        case ( percentOne >=61 && percentOne <=80 ):
+            statusFirst.innerHTML = "First"
+            statusFirst.style.backgroundColor = "#d4fbffeb"
+            statusFirst.style.color = "blue"
+        break;
+
+        case ( percentOne >=81 && percentOne <=90 ):
+            statusFirst.innerHTML = "Distinct"
+            statusFirst.style.backgroundColor = "#6bff6b"
+            statusFirst.style.color = "#000"
+        break;
+
+        case ( percentOne >=91 && percentOne <=100 ):
+            statusFirst.innerHTML = "Brilliant"
+            statusFirst.style.background = "linear-gradient(25deg, #3eb489, #90EE90)";
+            statusFirst.style.color = "#000"
+        break;
+
+        default:
+            break;
     }
 });
 
