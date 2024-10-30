@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    padding: 100px;
+}
+.product-wrap {
+    max-width: 400px;
+    border-radius: 16px;
+    border: 1px solid #dedede;
+    overflow: hidden;
+}
+.product-wrap img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+.quant {
+    display: flex;
+    border: 1px solid #dedede;
+    border-radius: 40px;
+    padding: 8px 16px;
+    max-width: 100px;
+    align-items: center;
+}
+.input {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #dedede;
+    background-color: rgb(224, 224, 224);
+    font-size: 22px;
+}
+.display {
+    width: 50px;
+    text-align: center;
+}
+.pro-info {
+    padding: 10px;
+}
+.display {
+    border: unset;
+}
