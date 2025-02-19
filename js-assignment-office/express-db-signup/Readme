@@ -1,0 +1,11 @@
+1. npm init -y
+2. npm install express
+3. npm install cors mysql
+4. node backend.js
+
+/* if we want to store data from user using sign-up form */
+* npm install express mysql2 cors body-parser
+
+/* install bcrypt for Password Hashing */
+npm install bcrypt
+npm install express mysql2 cors body-parser bcrypt

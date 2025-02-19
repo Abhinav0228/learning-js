@@ -1,0 +1,93 @@
+body {
+    font-family: "Comic Sans MS", sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+.error {
+    color: red;
+    font-size: 0.9em;
+    width: 100%;
+    text-align: left;
+    margin-top: 4px;
+}
+.sign-up-container {
+    background: white;
+    border: 2px solid #000;
+    padding: 40px;
+    width: 500px;
+    box-shadow: 10px 10px 0 #000;
+    text-align: center;
+}
+.sign-up-container .form-control {
+    border: 2px solid #000;
+    box-shadow: 3px 3px 0 #000;
+    font-size: 16px;
+}
+.sign-up-container .btn-primary {
+    background-color: #ffe26f;
+    border: 2px solid #000;
+    box-shadow: 3px 3px 0 #000;
+    font-size: 16px;
+}
+.sign-up-container .btn:hover {
+    background-color: #ffeb3b;
+}
+.link {
+    color: #ff7b00;
+}
+.was-validated .form-control:invalid {
+    border-color: #dc3545;
+  }
+  .was-validated .form-control:valid {
+    border-color: #198754;
+  }
+  #emailError {
+    text-align: left;
+  }
+  .show-pass label {
+    position: relative;
+    font-size: 14px;
+  }
+  .show-pass label:before {
+    content:'';
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid #d8d8d8;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 6px;
+  }
+  .show-pass input {
+    opacity: 0;
+    position: absolute;
+  }
+  .show-pass input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 9px;
+    width: 6px;
+    height: 12px;
+    border: solid #FF9800;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+@media screen and (max-width: 600px) {
+    .sign-up-container {
+        width: 90%;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+}
